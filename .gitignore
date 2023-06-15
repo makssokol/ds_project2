@@ -1,0 +1,6 @@
+**/project2
+*pkl
+*csv
+.ipynb_checkpoints
+*ipynb
+*.db

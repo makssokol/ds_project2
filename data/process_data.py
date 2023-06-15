@@ -24,11 +24,12 @@ def clean_data(df):
     df = pd.concat([df, categories], axis=1, sort=False)
     df.drop_duplicates(inplace=True)
     df.dropna(inplace=True)
+    print(df.head())
     return df
 
 def save_data(df, database_filename):
-    engine = create_engine('sqlite:///DisasterMessages.db')
-    df.to_sql('DisasterMeassages', engine, index=False)  
+    engine = create_engine('sqlite:///DisasterResponse.db')
+    df.to_sql('DisasterResponse', engine, index=False)  
     return
 
 def main():
